@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 450px;
+    padding: 0 20px;
+}
+.container .parent-tab{
+    margin-bottom: 8px;
+}
+.parent-tab label{
+    background-color: gold;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.parent-tab label span{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.parent-tab .content p{
+    font-size: 18px;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 0.1mm;
+    border-color: lightgrey;
+    margin-top: 8px;
+}
+.parent-tab .content{
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+.parent-tab input{
+    display: none;
+}
+.parent-tab input:checked ~ .content {
+    max-height: 100vh;
+}
+.parent-tab input:checked ~ label{
+    background-color: skyblue;
+}
